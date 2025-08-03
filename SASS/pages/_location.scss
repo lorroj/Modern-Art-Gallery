@@ -1,0 +1,97 @@
+body.location section.location{
+    background-color: $color-black;
+}
+
+figure.map_image{
+    margin: 0;
+    padding: 0;
+
+    & img{
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+}
+
+section.location div {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    @include breakpoint(tablet) {
+       
+    }
+
+    & button.back-home{
+        position: absolute;
+        margin-left: 0px;
+        z-index: 2;
+
+        @include breakpoint(tablet) {
+        margin-left: 2rem;
+    }
+    }
+
+
+}
+
+article.location-details{
+    background-color: $color-black;
+    color: $color-white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include breakpoint(tablet) {
+        padding-left: 2rem;
+        position: relative;
+        padding: 5rem 2rem 5rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 1rem;
+        column-gap: 1.5rem;
+
+    }
+    @include breakpoint(desktop){
+        max-width: 1000px;
+        margin: 0 auto;      
+        }
+    
+    & h1{
+        @include breakpoint(tablet){
+            grid-row: 1/4;
+            grid-column: 1/2;
+            margin: 0;
+            
+        }
+    } 
+    & h3{
+        color: $color-orange;
+        
+        font-size: 1.5rem;
+
+        @include breakpoint(tablet){
+            grid-row: 1/2;
+            grid-column: 2/3;
+            margin: 0;
+            
+        }
+    }
+    & p.address{
+        @include breakpoint(tablet){
+            grid-row: 2/3;
+            grid-column: 2/3;
+            margin: 0;
+        }
+    } 
+    & p.address-2{
+        @include breakpoint(tablet){
+            grid-row: 3/4;
+            grid-column: 2/3;
+            margin: 0;
+        }
+    } 
+}
+

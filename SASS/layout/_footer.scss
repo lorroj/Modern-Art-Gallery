@@ -1,0 +1,90 @@
+footer.home-page{
+    background-color: $color-black;
+    padding: 3rem 1rem 1rem 1rem;
+    height: auto;
+    width: auto;
+    
+
+    @include breakpoint(tablet) {
+        height: 250px;
+    }
+}
+
+footer.location-page{
+    background-color: $color-orange;
+    padding: 3rem 1rem 1rem 1rem;
+
+    @include breakpoint(desktop) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+footer article {
+  margin-bottom: 0;
+  height: auto;
+  
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-height: 300px; // limita la altura
+    overflow: hidden;  // recorta lo que se sale
+  }
+}
+
+footer.home-page article {
+  @include breakpoint(tablet) {
+    min-height: auto !important;
+  }
+}
+
+footer.home-page p{
+    color: $color-white;
+    
+
+    @include breakpoint(tablet){
+        width: 30%;
+        max-width: 300px;
+        margin-top: 0;
+    } 
+}
+
+footer.location-page p{
+    color: $color-black;
+}
+
+footer div.social-media{
+    margin: 1rem;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(tablet){
+        max-width: 100px;
+        margin: 0 30px 0 0;
+        align-items: flex-start;
+    } 
+}
+
+footer.location-page article p.footer-desc {
+  @include breakpoint(tablet){
+      margin: 0 140px 30px 50px;
+    } 
+}
+
+footer.location-page figure{
+    margin-left: 0;
+}
+
+footer.location-page article {
+  @include breakpoint(tablet) {
+    margin-left: 1rem;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 1000px;
+  }
+}

@@ -1,0 +1,144 @@
+figure.location__image img{
+    width: 100%;
+    aspect-ratio: 3 / 2; // proporción deseada en mobile
+    object-fit:cover;
+    object-position: center center; // recorta desde el centro hacia arriba
+    
+
+    @include breakpoint(tablet){
+        width: 60%;
+        max-width: 600px;
+        aspect-ratio: 3/4;
+        max-height: 720px;
+        left: -100px;
+    }  
+    @include breakpoint(desktop){
+        width: 50%;
+        max-width: auto;
+        aspect-ratio: 16/9;
+        max-height: auto;
+        height: 130%;
+        left: -100px;
+    }  
+
+
+    
+    
+}
+
+article.location-content figure.location__image,
+article.location-content div.location-text {
+  @include breakpoint(desktop) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+figure.location__image {
+  width: 100%;
+  
+  margin: 0; // quita margen por defecto
+  padding: 0;
+  display: block;
+
+    @include breakpoint(tablet){
+        
+        aspect-ratio: 16/9;
+        position: absolute;
+        left: 0
+    }
+
+    @include breakpoint(desktop){
+        width: 70%;
+        position: absolute;
+        left: 30%;
+    }
+
+    
+
+}
+
+figure {
+    margin: 0rem 1rem;
+
+    @include breakpoint(tablet){
+        margin: 0;
+    } 
+}
+
+figure.gallery-experience__image_3 {
+    
+    @include breakpoint(tablet){
+      width: 100%;
+      height: 100%;
+      grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    } 
+}
+
+figure.gallery-experience__image_2 {
+    
+    @include breakpoint(tablet){
+      width: 100%;
+      height: 100%;
+    } 
+}
+
+figure.gallery-experience__image_1 img{
+    width: 100%;
+    aspect-ratio: 1 / 1; // proporción deseada en mobile
+    object-fit:cover;
+    object-position: center center; // recorta desde el centro hacia arriba
+    
+    @include breakpoint(tablet){
+        max-height: 815px;
+        min-width: 415px;
+        max-width: 500px;
+    } 
+}
+
+figure.gallery-experience__image_2 img{
+    width: 100%;
+    aspect-ratio: 9 / 16; // proporción deseada en mobile
+    object-fit:cover;
+    object-position: center center; // recorta desde el centro hacia arriba
+    margin-bottom: 1rem;
+
+    @include breakpoint(tablet){
+       
+        height: 100%;
+    } 
+}
+
+figure.gallery-experience__image_3 img{
+    width: 100%;
+    aspect-ratio: 16 / 9; // proporción deseada en mobile
+    object-fit:cover;
+    object-position: center center; // recorta desde el centro hacia arriba
+    
+    @include breakpoint(tablet){
+        aspect-ratio: 4/3;
+        height: 100%;
+        
+    } 
+}
+
+
+//Location
+figure.map_image img{
+    width: 100%;
+    aspect-ratio: 9 / 14; // proporción deseada en mobile
+    object-fit:cover;
+    object-position: center center; 
+    max-height: 460px;
+
+    @include breakpoint(tablet) {
+        max-height: 560px;
+    }
+}
+
+footer.location-page figure img{
+    width: 100px;
+}
+

@@ -1,0 +1,202 @@
+body.home article.location-content{
+    margin-bottom: 7rem;
+    
+    @include breakpoint(tablet){
+        position: relative;
+        min-height: 600px;
+        margin-bottom: 11rem;
+    }
+
+    @include breakpoint(desktop){
+        margin-bottom: 3rem;
+    }
+}
+
+
+article.location-content{
+    
+    @include breakpoint(tablet){
+        position: relative;
+        margin-bottom: 40px;
+    } 
+
+    & div.image {
+        @include breakpoint(desktop){
+            &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 30%; // ancho aproximado del rectángulo negro
+            height: 99%;
+            max-height: 720px;
+            background-color: $color-black;
+            z-index: 1;
+    }
+    } 
+    }
+
+}
+
+article.location-content div.location-text{
+    margin-left: 2rem;
+    @include breakpoint(tablet){
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        max-width: 350px;
+    } 
+
+    @include breakpoint(desktop){
+        width: 100%;
+        max-width: 1800px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 150px 150px;
+        column-gap: 15%;
+        left: 0%;
+        padding-left: 10%;
+        margin-left: 0;
+        top: 18%;
+        height: 100%;
+        justify-content: start;
+        margin-right: 10px;
+    } 
+    @include breakpoint(large){
+        column-gap: 20%;
+        padding-left: 10%;
+        
+    } 
+    @include breakpoint(extra-large){
+        column-gap: 23%;
+        padding-left: 15%;
+        
+    } 
+
+    & h1{
+        @include breakpoint(desktop){
+            grid-column: 1/2;
+            grid-row: 1/2;
+            color: $color-white;
+            font-size: 5rem;
+            max-width: 400px;
+        } 
+    }
+
+    & p{
+        @include breakpoint(desktop){
+            grid-column: 2/3;
+            grid-row: 1/2;
+            max-width: 350px;
+        } 
+    }
+
+    & button{
+        @include breakpoint(desktop){
+            grid-column: 2/3;
+            grid-row: 2/3;
+            justify-content: start;
+            height: 56px;
+            width: 230px;
+        } 
+    }
+
+}
+
+section.gallery-experience{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    @include breakpoint(tablet){
+        margin-left: 2rem;
+        margin-right: 2rem;
+        
+    }
+    
+}
+
+article.gallery-experience__cta{
+    background-color: $color-black;
+    margin: 1rem 1rem 5rem 1rem;
+    padding: 3rem 1.5rem;
+
+    & h2 {
+        color: $color-white;
+        margin: 0;
+    }
+
+    & p {
+        color: $color-white;
+        margin: 1rem 0 0 0;
+        line-height: 2rem;
+    }
+
+    @include breakpoint(tablet) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        padding: 0rem 1rem;
+        height: 100%;
+        align-self: stretch;
+    } 
+
+}
+
+
+article.gallery-experience__content{
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(tablet){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 986px;
+        margin: 0 auto 1rem auto;
+    } 
+}
+
+div.gallery-experience__content_text{
+    @include breakpoint(tablet){
+        max-width: 300px;
+        min-width: 260px;
+    } 
+}
+
+div.gallery-experience_come_be{
+    @include breakpoint(tablet){
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+        margin: 0 auto 200px auto;
+        max-width: 986px;
+        height: auto;
+        max-height: 800px;
+    } 
+}
+
+figure.gallery-experience__image_2{
+    @include breakpoint(tablet){
+        grid-column: 1 / 2;
+        grid-row: 1 / 3; 
+    } 
+}
+
+figure.gallery-experience__image_1{
+    @include breakpoint(tablet){
+        grid-row: 1/2;
+        grid-column: 2/3;
+    } 
+}
+
+* {
+  box-sizing: border-box;
+}

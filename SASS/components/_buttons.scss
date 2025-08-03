@@ -1,0 +1,9 @@
+article.location-content button{
+    @include button-style($color-black, $color-orange, $color-white);
+
+}
+
+button.back-home{
+    @include button-style($color-black, $color-orange, $color-white);
+   
+}
